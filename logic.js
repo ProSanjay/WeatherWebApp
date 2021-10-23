@@ -9,20 +9,20 @@ function present(){
   const location='gurugram';
    let url= `${weather.baseUrl}?q=${location}&units=${weather.unit}&APPID=${weather.key}`;
     alert(url);
-//   fetch(url).then((response) => {
-//    if (response.status === 200) {
-//      return response.json();
-//    }
-//    throw Error("Error fetching data.");
+  fetch(url).then((response) => {
+   if (response.status == 200) {
+     return response.json();
+   }
+   throw Error("Error fetching data.");
    
-//  })
-//  .then((data) => {
-//    updateDom(data);
-//  })
-//  .catch((error) => {
-//    console.error(error);
-//    alert(`Error getting information for ${location}`);
-//  });
+ })
+ .then((data) => {
+   updateDom(data);
+ })
+ .catch((error) => {
+   console.error(error);
+   alert(`Error getting information for ${location}`);
+ });
 }
 present();
 function getInformation(event){
