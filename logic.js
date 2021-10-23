@@ -1,9 +1,9 @@
 const weather={
-  baseUrl:"http://api.openweathermap.org/data/2.5/weather",
+  baseUrl:"https://api.openweathermap.org/data/2.5/weather",
   key:"644c836c8de63da7cfc1bf1b12a14cbc",
   unit:"metric",
   unknownValue:"NA",
-  imageUrl:"http://openweathermap.org/img/wn/"
+  imageUrl:"https://openweathermap.org/img/wn/"
 };
 function present(){
   const location='gurugram';
@@ -23,7 +23,7 @@ function present(){
  })
  .catch((error) => {
    console.error(error);
-   alert(`Error sanjay updhhhhhhate getting information for ${location}`);
+   alert(`Error sasssnjay updhhhhhhate getting information for ${location}`);
  });
 }
 present();
