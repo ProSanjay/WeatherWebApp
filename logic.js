@@ -6,7 +6,7 @@ const weather={
   imageUrl:"http://openweathermap.org/img/wn/"
 };
 function present(){
-  let location="gurugram";
+  const location='gurugram';
    let url= `${weather.baseUrl}?q=${location}&units=${weather.unit}&APPID=${weather.key}`;
     
   fetch(url).then((response) => {
