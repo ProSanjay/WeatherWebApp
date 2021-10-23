@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+    crossorigin="anonymous"
+  />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="checkbox" id="swap">
+    <div class="container">
+        <div class="weather">
+      
+            <div class="weather-gradient"></div>
+          <div class="weather-information">
+              <div class="date">
+                  <p class="day">Wednesday</p>
+                  <p class="month"> 16 Oct 2021</p>
+              </div>
+              <div class="location">
+                <i class="fas fa-map-marker-alt fa-sm"></i>
+                <span class="city">Mumbai, IN</span> 
+              </div>
+              <div class="temperature">
+                <div class="temperature-image">
+                    <img class="img" src="http://openweathermap.org/img/wn/50d.png"/>
+                </div>
+                <div class="celcius">32&deg;C</div>
+                <div class="temp-type">Smoke</div>
+              </div>
+         
+         
+         
+         
+            </div>
+            <label class="hide-weather" for="swap">
+                <i id="icon" class="fas fa-arrow-circle-left fa-2x"></i></label>
+        </div>
+        <div class="information">
+            <div class="information-humidity">
+                <p class="humidityy">Humdity</p>
+                <p class="amount">43%</p>
+            </div>
+            <div class="information-wind">
+                <p class="information-windd">wind speed</p>
+                <p class="speed">2.57km/hr</p>
+            </div>
+            <div class="information-visibility">
+                <p class="visibilityy">visibility</p>
+                <p class="amount">3000</p>
+            </div>
+            <div class="information-avg-temp">
+                <p class="av-temp">avg-temp</p>
+                <p class="amount">32&deg;C</p>
+            </div>
+            <div class="information-search-box">
+                <form  class="form" onsubmit="getInformation(event)">
+                    <input type="text" placeholder="click here to enter location" class="input" required> 
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <label class="information-hide-weather" for="swap">
+                <i id="right-icon" class="fas fa-arrow-circle-left fa-2x"></i></label>
+        </div>
+       
+    </div>
+  <script src="logic.js"></script>
+</body>
+</html>
