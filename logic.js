@@ -22,7 +22,7 @@ function present(){
  })
  .catch((error) => {
    console.error(error);
-   alert(`Error getting information for ${location}`);
+   alert(`Error sanjay getting information for ${location}`);
  });
 }
 present();
