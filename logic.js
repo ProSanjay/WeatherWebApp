@@ -8,14 +8,13 @@ const weather={
 function present(){
   const location='gurugram';
    let url= `${weather.baseUrl}?q=${location}&units=${weather.unit}&APPID=${weather.key}`;
-    alert(url);
   fetch(url).then((response) => {
-  //  if (response.status !== 200) {
-  //   return response.json(); 
-  //  }
+   if (response.status === 200) {
+    return response.json(); 
+   }
    
-  //  throw Error("Error fetching data.");
-   alert(response.status);
+   throw Error("Error fetching data.");
+   
    
  })
  .then((data) => {
@@ -23,7 +22,7 @@ function present(){
  })
  .catch((error) => {
    console.error(error);
-   alert(`Error sasssnjay updhhhhhhate getting information for ${location}`);
+   alert(`Error  getting information for ${location}`);
  });
 }
 present();
@@ -33,21 +32,21 @@ function getInformation(event){
   let location = document.querySelector(".information-search-box .form")[0]
     .value;
     let url= `${weather.baseUrl}?q=${location}&units=${weather.unit}&APPID=${weather.key}`;
-     alert(url);
-  //  fetch(url).then((response) => {
-  //   if (response.status === 200) {
-  //     return response.json();
-  //   }
-  //   throw Error("Error fetching data.");
     
-  // })
-  // .then((data) => {
-  //   updateDom(data);
-  // })
-  // .catch((error) => {
-  //   console.error(error);
-  //   alert(`Error getting information for ${location}`);
-  // });
+   fetch(url).then((response) => {
+    if (response.status === 200) {
+      return response.json();
+    }
+    throw Error("Error fetching data.");
+    
+  })
+  .then((data) => {
+    updateDom(data);
+  })
+  .catch((error) => {
+    console.error(error);
+    alert(`Error getting information for ${location}`);
+  });
 }
 function updateDom(data){
   const update=getDates();
