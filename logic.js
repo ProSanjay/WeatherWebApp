@@ -8,7 +8,7 @@ const weather={
 function present(){
   const location='gurugram';
    let url= `${weather.baseUrl}?q=${location}&units=${weather.unit}&APPID=${weather.key}`;
-    
+    alert(url);
   fetch(url).then((response) => {
    if (response.status === 200) {
      return response.json();
