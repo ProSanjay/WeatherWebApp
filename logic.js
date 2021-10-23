@@ -10,10 +10,11 @@ function present(){
    let url= `${weather.baseUrl}?q=${location}&units=${weather.unit}&APPID=${weather.key}`;
     alert(url);
   fetch(url).then((response) => {
-   if (response.status == 200) {
-     return response.json();
+   if (response.status !== 200) {
+     throw Error("Error fetching data.");
    }
-   throw Error("Error fetching data.");
+   return response.json();
+   
    
  })
  .then((data) => {
