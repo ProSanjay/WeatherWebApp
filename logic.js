@@ -11,9 +11,10 @@ function present(){
     alert(url);
   fetch(url).then((response) => {
    if (response.status !== 200) {
-     throw Error("Error fetching data.");
+    return response.json(); 
    }
-   return response.json();
+   
+   throw Error("Error fetching data.");
    
    
  })
@@ -28,8 +29,8 @@ function present(){
 present();
 function getInformation(event){
     event.preventDefault();
-    let location="gurugram";
-   location = document.querySelector(".information-search-box .form")[0]
+  
+  let location = document.querySelector(".information-search-box .form")[0]
     .value;
     let url= `${weather.baseUrl}?q=${location}&units=${weather.unit}&APPID=${weather.key}`;
      alert(url);
